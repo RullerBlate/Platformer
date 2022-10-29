@@ -20,6 +20,8 @@ public class Controls : MonoBehaviour
     }
     private void Update()
     {
+        _animator.SetBool(_IsWalking, false);
+
         float horizontal = Input.GetAxis("Horizontal");
 
         _rigidbody.velocity = new Vector2(horizontal * _speed, _rigidbody.velocity.y);
@@ -28,8 +30,6 @@ public class Controls : MonoBehaviour
         {
             _animator.SetBool(_IsWalking, true);
         }
-        else
-            _animator.SetBool(_IsWalking, false);
 
         if (Input.GetKey(KeyCode.Space) && !_inAir)
         {
@@ -43,10 +43,7 @@ public class Controls : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
             _inAir = false;
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-            Destroy(gameObject);
-
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Coin"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Coin"))
             Destroy(collision.gameObject);
     }
 }

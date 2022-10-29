@@ -22,4 +22,12 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("LeftWall"))
             _isGoingRight = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<Controls>(out Controls controls))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
