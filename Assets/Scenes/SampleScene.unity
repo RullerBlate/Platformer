@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 119836101}
   - component: {fileID: 119836100}
+  - component: {fileID: 119836102}
   m_Layer: 10
   m_Name: EnemyExample
   m_TagString: Untagged
@@ -202,6 +203,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &119836102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119836099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf624ae070ea524896115f965fd1542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &328196269
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d048dc8d0386434cb6f5ce83c085e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 119836099}
+  _template: {fileID: 119836102}
   _path: {fileID: 1881899566}
   _coolDown: 1.5
 --- !u!4 &1881899566
