@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 214760364}
   - component: {fileID: 214760365}
-  - component: {fileID: 214760366}
   - component: {fileID: 214760367}
   m_Layer: 5
   m_Name: Health
@@ -212,20 +211,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &214760366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214760363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7c62aa9c76b034bb9ce61e9f32face, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: {fileID: 214760365}
-  _healthTarget: 0
 --- !u!114 &214760367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,11 +220,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 214760363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a48eb1dcddc2e64d908e5bea850abb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6392f4b0ec112274fae714c2e384d78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 214760366}
   _health: {fileID: 214760365}
+  _healthTarget: 0
 --- !u!1 &239167891
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +754,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 214760366}
+      - m_Target: {fileID: 214760367}
         m_MethodName: IncreaseHP
         m_Mode: 1
         m_Arguments:
@@ -1173,7 +1158,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 214760366}
+      - m_Target: {fileID: 214760367}
         m_MethodName: LowHP
         m_Mode: 1
         m_Arguments:
@@ -1181,7 +1166,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: sad
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1861770914
